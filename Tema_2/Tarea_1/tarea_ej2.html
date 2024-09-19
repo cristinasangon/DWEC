@@ -1,0 +1,30 @@
+<html>
+    <head>
+
+    </head>
+    <body style="background-color: black; color:rgb(162, 162, 162);"></body>
+        2.- Escribir los números primos comprencidos entre entre 1 y el número introducido a través un prompt.
+        <script>
+            document.write("</br>");
+            lim = prompt("Introduce un numero: ")
+            document.write("</br>");
+            for(x = 1; x <= lim; x++){
+                if(esPrimo(x)){
+                    document.write(x + ", ");
+                }
+            }
+
+            function esPrimo(x){
+                if(x < 2){
+                    return false;
+                }
+                for(y = 2; y < x; y++){
+                    if((x%y)==0){
+                        return false;
+                    }
+                }
+                return true;
+            }
+        </script>
+    </body>
+</html>

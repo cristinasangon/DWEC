@@ -1,0 +1,28 @@
+<html>
+    <head>
+
+    </head>
+    <body style="background-color: black; color:rgb(162, 162, 162);"></body>
+        1.- Escribir los números primos comprencidos entre entre 1 y 10.
+        <script>
+            document.write("</br>")
+            for(x = 1; x <= 10; x++){
+                if(esPrimo(x)){
+                    document.write(x + ", ");
+                }
+            }
+
+            function esPrimo(x){
+                if(x < 2){
+                    return false;
+                }
+                for(y = 2; y < x; y++){
+                    if((x%y)==0){
+                        return false;
+                    }
+                }
+                return true;
+            }
+        </script>
+    </body>
+</html>
