@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <style>
+            .container {
+                display: flex;
+                justify-content: space-around; 
+            }
+            .column {
+                margin: 10px;
+                width: 30%;
+            }
+        </style>
+    </head>
+    <body style="background-color: black; color:rgb(162, 162, 162);">
+        <h2>Los números pares, impares y primos entre el 50 y 100 son:</h2>
+        <div class="container">
+            <div class="column">
+                <strong>Los pares son:</strong></br>
+                <script>
+                    for(var x = 50; x <= 100; x++){
+                        if((x%2) == 0){
+                            document.write(x + "</br>"); 
+                        }
+                    }
+                </script>
+            </div>
+
+            <div class="column">
+                <strong>Los impares son:</strong></br>
+                <script>
+                    for(var x = 50; x <= 100; x++){
+                        if((x%2) != 0){
+                            document.write(x + "</br>"); 
+                        }
+                    }
+                </script>
+            </div>
+
+            <div class="column">
+                <strong>Los primos son:</strong></br>
+                <script>
+                    for(var x = 50; x <= 100; x++){
+                        if(esPrimo(x)){
+                            document.write(x + "</br>"); 
+                        }
+                    }
+
+                    function esPrimo(x){
+                        if(x < 2){
+                            return false;
+                        }
+                        for(y = 2; y < x; y++){
+                            if((x%y)==0){
+                                return false;
+                            }
+                        }
+                        return true;
+                    }
+                </script>
+            </div>
+        </div>
+    </body>
+</html>
