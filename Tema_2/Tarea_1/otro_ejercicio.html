@@ -1,0 +1,30 @@
+<html>
+    <head>
+
+    </head>
+    <body style="background-color: black; color:rgb(162, 162, 162);"></body>
+        <script>
+           // Función para pedir un texto al usuario
+        function solicitarTexto(mensaje) {
+            let texto = "";
+            while (texto.trim() === "") {
+                texto = prompt(mensaje); // Solicita el texto hasta que el usuario ingrese algo válido
+            }
+            return texto;
+        }
+
+        // Solicitar al usuario una frase o palabra
+        let texto = solicitarTexto("Introduzca una palabra o una frase:");
+
+        // Solicitar al usuario la cadena a buscar
+        let cadenaABuscar = solicitarTexto("Introduzca una cadena a buscar:");
+
+        // Contar cuántas veces aparece la cadena en el texto
+        let numeroDeRepeticiones = (texto.match(new RegExp(cadenaABuscar, "g")) || []).length;
+
+        // Mostrar el resultado
+        alert(`La cadena "${cadenaABuscar}" aparece ${numeroDeRepeticiones} veces en el texto.`);
+
+        </script>
+    </body>
+</html>

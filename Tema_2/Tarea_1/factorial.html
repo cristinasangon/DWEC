@@ -1,0 +1,29 @@
+<html>
+    <head>
+
+    </head>
+    <body style="background-color: black; color:rgb(162, 162, 162);"></body>
+        <script>
+           datoCorrecto = false;
+           var dato;
+           while(!datoCorrecto){
+            dato = prompt("Introduce un numero entre el 1 y el 10: ");
+            if(isNaN(dato) || (dato < 1 || dato > 10)){
+                alert("El dato no es correcto")
+            }
+            else{
+                datoCorrecto = true;
+            }
+           }
+
+           document.write(dato + "! = ")
+           var factorial = 1;
+           for(var x = dato; x > 0; x--){
+              factorial *= x;
+              document.write(x + " * "); 
+           }
+
+           document.write(" = " + factorial);
+        </script>
+    </body>
+</html>
