@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <title>Ejercicio 10</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column; 
+        }
+
+        #cronometro {
+            font-size: 60px;
+            padding: 20px 60px;
+            border: 2px solid #000;
+            border-radius: 10px;
+            text-align: center;    
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    </style>
+    <script src="ej10.js" defer></script>
+</head>
+<body onload="inicializar()">
+    <div id="cronometro">00:00:00</div>
+    <button id="detenerBtn">Detener</button> 
+    <button id="reanudarBtn">Reanudar</button> 
+</body>
+</html>
+
